@@ -39,7 +39,7 @@ server.on('request', (req, res) => {
     case 'POST':
       const fileStream = fs.createWriteStream(filepath, { flags: 'wx' });
       const limitPipe = new LimitSizeStream({
-        limit: 10000000000000000000000,
+        limit: 10000,
         encoding: 'utf-8',
       });
       req
